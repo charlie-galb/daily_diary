@@ -3,12 +3,8 @@ require_relative './model/entry'
 
 class DailyDiary < Sinatra::Base
 
-  before do
-    @diary_entries = Entry.all
-  end
-
   get '/' do
-    @title = Entry.link
+    @titles = Entry.titles_to_links
     erb(:index)
   end
 
@@ -18,7 +14,7 @@ class DailyDiary < Sinatra::Base
   end
 
   get '/content' do
-    'Is this working?'
+    @content = params[:content]
   end
 
 end
