@@ -1,0 +1,30 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/charlesgalbraith/coding/projects/daily_diary/lib/app.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/charlesgalbraith/coding/projects/daily_diary/spec/Features/check_test_env_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1603359215
+  }
+}
