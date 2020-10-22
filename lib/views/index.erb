@@ -1,1 +1,9 @@
 <%= @diary_entries %>
+<br>
+<br>
+<br>
+<form action='/new_entry' method='post'>
+  <input type='text' name='title' value='Add a title to your entry'>
+  <input type='text' name='content' value='Add an entry to your title'>
+  <input type='submit' name='Submit'>
+</form>

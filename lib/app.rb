@@ -11,4 +11,9 @@ class DailyDiary < Sinatra::Base
     erb(:index)
   end
 
+  post '/new_entry' do
+    Entry.create(params[:title], params[:content])
+    redirect '/'
+  end
+
 end
