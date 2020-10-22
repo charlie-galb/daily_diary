@@ -1,6 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/charlesgalbraith/coding/projects/daily_diary/spec/setup_test_database.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          3,
+          3,
+          3,
+          null,
+          null
+        ]
+      },
       "/Users/charlesgalbraith/coding/projects/daily_diary/lib/app.rb": {
         "lines": [
           1,
@@ -9,11 +22,11 @@
           1,
           null,
           1,
-          5,
+          4,
           null,
           null,
           1,
-          4,
+          3,
           null,
           null,
           1,
@@ -31,16 +44,18 @@
           1,
           null,
           1,
-          6,
+          1,
           null,
-          6,
-          47,
+          0,
           null,
           null,
           1,
-          2,
-          2,
+          5,
+          8,
           null,
+          null,
+          1,
+          3,
           null,
           null,
           null
@@ -59,19 +74,9 @@
           null
         ]
       },
-      "/Users/charlesgalbraith/coding/projects/daily_diary/spec/Features/check_test_env_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
       "/Users/charlesgalbraith/coding/projects/daily_diary/spec/Features/view_entry_spec.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -93,6 +98,6 @@
         ]
       }
     },
-    "timestamp": 1603362935
+    "timestamp": 1603364422
   }
 }
