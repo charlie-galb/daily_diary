@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'model/entry'
+require_relative './model/entry'
 
 class DailyDiary < Sinatra::Base
 
@@ -8,12 +8,17 @@ class DailyDiary < Sinatra::Base
   end
 
   get '/' do
+    @title = Entry.link
     erb(:index)
   end
 
   post '/new_entry' do
     Entry.create(params[:title], params[:content])
     redirect '/'
+  end
+
+  get '/content' do
+    'Is this working?'
   end
 
 end

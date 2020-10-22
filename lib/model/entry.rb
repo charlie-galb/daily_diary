@@ -10,8 +10,19 @@ class Entry
 
   def self.all
     result = @connection.exec( "SELECT * FROM entries;")
-    result.map { |entry| [entry['title'], entry['content']] }
+    @entry_array = result.map { |entry| [entry['title'], entry['content']] }
   end
+
+  def self.link
+    result = @connection.exec( "SELECT * FROM entries;")
+    @title_array = result.map { |entry| entry = "<a href='/content'>'#{entry['title']}'</a>" }
+  end
+
+
+  # def self.all_titles
+  #   @titles = @connection.exec( "SELECT title FROM entries;")
+  #   @titles.map { |title| }
+  # end
 
   def self.create(title, content)
     @connection.exec("INSERT INTO entries (title, content) VALUES ('#{title}', '#{content}');")
