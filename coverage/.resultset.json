@@ -4,11 +4,43 @@
       "/Users/charlesgalbraith/coding/projects/daily_diary/lib/app.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/charlesgalbraith/coding/projects/daily_diary/lib/model/entry.rb": {
+        "lines": [
+          1,
           null,
           1,
           null,
           1,
-          1,
+          2,
+          null,
+          2,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/charlesgalbraith/coding/projects/daily_diary/spec/Features/add_entry_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -23,8 +55,19 @@
           null,
           null
         ]
+      },
+      "/Users/charlesgalbraith/coding/projects/daily_diary/spec/Features/view_entry_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1603359215
+    "timestamp": 1603361427
   }
 }
