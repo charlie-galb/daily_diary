@@ -29,4 +29,13 @@ describe Entry do
     end
   end
 
+  describe '#edit' do
+    it 'edits the content of a post'do
+      entry = Entry.create(title: 'Test Title', content: 'This is still the same')
+      persisted_data = persisted_data(id: entry.id)
+      edited_entry = Entry.edit(title: 'Test Title', content: 'This has been changed')
+      expect(edited_entry.content).to eq 'This has been changed'
+    end
+  end
+
 end

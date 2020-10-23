@@ -2,7 +2,7 @@
 <ul>
   <% @titles.each do |entry| %>
   <li>
-    <a href="/daily_diary/content?content=<%=entry.content %>">
+    <a href="/daily_diary/content?id=<entry.id>&title=<%=entry.title%>&content=<%=entry.content %>">
       <%= entry.title %>
     </a>
   </li>

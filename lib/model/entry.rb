@@ -28,4 +28,9 @@ class Entry
     Entry.new(id: result[0]['id'], title: result[0]['title'], content: result[0]['content'])
   end
 
+  def self.edit(title:, content:)
+    result = @connection.exec("UPDATE entries SET content = '#{content}' WHERE title = '#{title}'  RETURNING id, title, content;")
+    Entry.new(id: result[0]['id'], title: result[0]['title'], content: result[0]['content'])
+  end
+
 end

@@ -5,7 +5,7 @@ feature 'add new entry' do
     fill_in('content', with: 'Late for work, I stubbed my toe heading out the door')
     click_on('Submit')
     click_link('Bad day, got worse')
-    click_button('Edit content')
+    click_on('Edit content')
     expect(page).to have_field('content', with: 'Late for work, I stubbed my toe heading out the door')
   end
 end

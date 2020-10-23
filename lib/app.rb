@@ -14,7 +14,22 @@ class DailyDiary < Sinatra::Base
   end
 
   get '/daily_diary/content' do
+    @title = params[:title]
     @content = params[:content]
+    erb(:content)
+  end
+
+  get '/daily_diary/content/edit_content' do
+    @title = params[:title]
+    @content = params[:content]
+    erb(:edit_content)
+  end
+
+  post 'daily_diary/content/edit_content/submit' do
+    @title = params[:title]
+    @content = params[:content]
+    Entry.edit(title: @title, content: @content)
+    redirect '/daily_diary'
   end
 
 end

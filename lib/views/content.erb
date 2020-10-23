@@ -1,4 +1,7 @@
+<h1><%= @title %></h1>
 <%= @content %>
-<br>
-<form action='/'
-<input type
+<form action='/daily_diary/content/edit_content' method='get'/>
+<input type='hidden' name='content' value='<%= @content %>' />
+<input type='hidden' name='title' value='<%= @title %>' />
+<input type='submit' name='Edit content' value='Edit content'/>
+</form>
