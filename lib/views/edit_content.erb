@@ -1,8 +1,8 @@
 <h1><%= @title %></h1>
-<form action='/daily_diary/edit_content/submit' method='post'>
-  <input type='hidden' name='title' value='<%= @title %>' />
-  <textarea  id='content' name='content rows='10' columns='20'>
-    <%= @content %>
-  </textarea>
+<textarea  id='post_content' name='post_content' form='formid' value='<%= @content %>' rows='10' columns='20'>
+  <%= @content %>
+</textarea>
+<form id='formid' action='/daily_diary/content/edit_content/submit' method='post'>
   <input type='submit' name='Submit'>
+  <input type='hidden' name='title' value='<%= @title %>' />
 </form>

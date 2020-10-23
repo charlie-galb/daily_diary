@@ -25,7 +25,8 @@ class DailyDiary < Sinatra::Base
     erb(:edit_content)
   end
 
-  post 'daily_diary/content/edit_content/submit' do
+  post '/daily_diary/content/edit_content/submit' do
+    "Hellow!"
     @title = params[:title]
     @content = params[:content]
     Entry.edit(title: @title, content: @content)
