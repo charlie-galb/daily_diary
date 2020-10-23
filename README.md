@@ -1,6 +1,13 @@
 # Daily Diary
 This is a simple sinatra web app designed to allow users to store and access daily musings online.
 
+## Functionality
+Users can:
+* Add new diary entries from the homepage
+* Give diary entries a title
+* See a list of entry titles displayed on the homepage
+* Peruse the content of old entries by clicking on the title
+
 ## Database set up
 
 1. Connect to <code>psql</code>
