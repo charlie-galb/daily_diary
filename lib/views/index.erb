@@ -2,13 +2,13 @@
 <ul>
   <% @titles.each do |entry| %>
   <li>
-    <a href="/content?content=<%=entry.content %>">
+    <a href="/daily_diary/content?content=<%=entry.content %>">
       <%= entry.title %>
     </a>
   </li>
   <% end %>
 </ul>
-<form action='/new_entry' method='post'>
+<form action='/daily_diary/new_entry' method='post'>
   <input type='text' name='title' value='Add a title to your entry'>
   <input type='text' name='content' value='Add an entry to your title'>
   <input type='submit' name='Submit'>
