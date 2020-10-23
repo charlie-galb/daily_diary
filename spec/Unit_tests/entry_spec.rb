@@ -1,18 +1,31 @@
 require 'model/entry'
+require 'database_helpers'
 describe Entry do
 
-  describe '#self.create' do
-    it 'stores the name and title of diary entries in a database' do
-      Entry.create('TESTING', '1,2,3,4')
-      expect(Entry.all).to include(['TESTING', '1,2,3,4'])
+  describe '#all' do
+    it 'stores an array of bookmarks' do
+      entry = Entry.create(title: 'TESTING', content: '1,2,3,4')
+      Entry.create(title: 'Test2', content: 'This is the second test object.')
+      Entry.create(title: 'Test3', content: 'This is the third test object.')
+
+      entries = Entry.all
+
+      expect(entries.length).to eq 3
+      expect(entries.first).to be_a Entry
+      expect(entries.first.id).to eq entry.id
+      expect(entries.first.title).to eq 'TESTING'
+      expect(entries.first.content).to eq '1,2,3,4'
     end
   end
 
-  describe '#titles_to_links' do
-    it 'converts titles in database to an html link' do
-      Entry.create('TESTING', '1,2,3,4')
-      Entry.create('Hey!', 'Is this working?')
-      expect(Entry.titles_to_links).to eq(["<a href='/content?content=1,2,3,4'>'TESTING'</a>", "<a href='/content?content=Is this working?'>'Hey!'</a>"])
+  describe '#create' do
+    it 'creates a new entry' do
+      entry = Entry.create(title: 'TESTING', content: '1,2,3,4')
+      persisted_data = persisted_data(id: entry.id)
+      expect(entry).to be_a Entry
+      expect(entry.id).to eq persisted_data['id']
+      expect(entry.title).to eq 'TESTING'
+      expect(entry.content).to eq '1,2,3,4'
     end
   end
 

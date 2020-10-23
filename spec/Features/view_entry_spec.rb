@@ -1,8 +1,7 @@
-feature 'entries visible on homepage' do
+feature 'titles visible on homepage' do
   scenario 'user can view entries' do
-    Entry.create('Alright?', 'Yes, I am actually.')
+    Entry.create(title: 'Alright?', content: 'Yes, I am actually.')
     visit '/'
     expect(page).to have_content "Alright?"
-    expect(page).to have_content "Yes, I am actually."
   end
 end

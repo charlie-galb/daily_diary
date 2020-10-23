@@ -4,12 +4,12 @@ require_relative './model/entry'
 class DailyDiary < Sinatra::Base
 
   get '/' do
-    @titles = Entry.titles_to_links
+    @titles = Entry.all
     erb(:index)
   end
 
   post '/new_entry' do
-    Entry.create(params[:title], params[:content])
+    Entry.create(title: params[:title], content: params[:content])
     redirect '/'
   end
 
